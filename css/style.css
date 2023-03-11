@@ -1,0 +1,98 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+#conteiner {
+    background-color: #f0f0f2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px;
+    margin: 0;
+}
+
+.consult {
+    background-color: white;
+    height: auto;
+    width: 45%;
+    overflow-y: auto;
+    border: 1px solid cadetblue;
+}
+
+.content {
+    background-color: white;
+    height: auto;
+    width: 45%;
+    overflow-y: auto;
+    border: 1px solid cadetblue;    
+}
+
+.linhaCentral {
+    height: auto;
+    width: 5px;
+    background-color: white;
+}
+
+.tdImage {
+    text-align: center;
+}
+
+.cabecalhoTable th {
+    text-align: center;
+}
+
+.tdImage img {
+    width: 25px;
+}
+
+table, td, th {  
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+th, td {
+    padding: 10px;
+}
+
+.styleText {
+    margin: 10px;
+}
+
+.styleText h3{
+    text-align: center;
+}
+
+.styleText h2{
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.corMsgError {
+    color: red;
+}
+.btnCriarReceita{
+    width: 100px;
+    height: 20px;
+    background-color: darkcyan;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+}
+
+a:hover .btnCriarReceita{
+    background-color: lightseagreen;
+}
+
+div .container {
+    margin: 0 auto 0 auto;
+}

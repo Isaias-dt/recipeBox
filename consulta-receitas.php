@@ -19,13 +19,21 @@
                 if (!empty($_GET['id'])) {
                     
                     $IDurl = mysqli_real_escape_string($conectar, $_GET['id']);
-                    $queryConsult = "SELECT * FROM receita WHERE ID = $IDurl";
+                    $queryConsult = 
+                    "SELECT receita.*, cat.Nome FROM receita
+                    INNER JOIN categoria cat
+                    ON receita.IDCategoria = cat.ID
+                    WHERE receita.ID = $IDurl";
+
                     $execQueryConsult = mysqli_query($conectar, $queryConsult) or die('Error ao consultar: '.mysqli_error($conectar));
                     
                     if (mysqli_num_rows($execQueryConsult) > 0) {
                         if ($result = mysqli_fetch_assoc($execQueryConsult)) {
+                            // echo "<pre>";
+                            //     print_r($result);
+                            // echo "</pre>";
                             echo'
-                                <span>Categoria: '.nl2br($result['IDCategoria']).'</span>
+                                <span>Categoria: '.nl2br($result['Nome']).'</span>
                                 <h2>'.nl2br($result['Titulo']).'</h2>
                                 <h3>Ingredientes</h3>
                                 <p>'.nl2br($result['Ingrediente']).'</p>

@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
+        <?php
+            require('footer.php');
+            require('header.php');
+        ?>
         <meta charset="UTF-8"/>
         <title>Menu Receita</title>
-    
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <div class="conteiner">
+        <div id="conteiner">
             <header>
-                <nav>
-                    <ul>
-                        <li><a href="">Home</a></li>
-                        <li><a href="consulta-receitas.php">Consultar</a></li>
-                        <li><a href="sobre.php">Sobre</a></li>
-                    </ul>
-                </nav>
+                <?php menu(); ?>
             </header>
-            <section></section>
+            <section>
+                
+            </section>
             <footer>
-
+                <?php footer(); ?>
             </footer>
         </div>
     </body>
